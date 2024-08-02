@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="app">
+        <h1>Book List Management</h1>
+
+        <!-- Categories Section -->
+        <section>
+            <h2>Categories</h2>
+            <form id="categoryForm">
+                <input type="hidden" id="categoryId" value="">
+                <input type="text" id="categoryName" placeholder="Category Name" required>
+                <button type="submit">Add/Update Category</button>
+            </form>
+            <ul id="categoryList"></ul>
+        </section>
+
+        <!-- Books Section -->
+        <section>
+            <h2>Books</h2>
+            <form id="bookForm">
+                <input type="hidden" id="bookId" value="">
+                <input type="text" id="bookTitle" placeholder="Title" required>
+                <input type="text" id="bookAuthor" placeholder="Author" required>
+                <input type="date" id="bookPublicationDate" placeholder="Publication Date">
+                <input type="text" id="bookPublisher" placeholder="Publisher">
+                <input type="number" id="bookPages" placeholder="Number of Pages">
+                <select id="bookCategory" required>
+                    <option value="">Select Category</option>
+                </select>
+                <button type="submit">Add/Update Book</button>
+            </form>
+            <input type="text" id="searchText" placeholder="Search by Title, Author, Publisher">
+            <input type="date" id="searchDate" placeholder="Search by Publication Date">
+            <button id="searchButton">Search</button>
+            <ul id="bookList"></ul>
+        </section>
+    </div>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
